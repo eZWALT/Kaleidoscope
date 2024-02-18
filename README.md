@@ -8,6 +8,8 @@ Our language will strictly obey the following assumptions:
     - No semantic analysis will be performed
 
 The description of Kaleidoscope grammar can be found at the parser.h file for a more detailed description. 
-g++ -std=c++14 main.cpp parser.cpp AST.cpp lexer.cpp `llvm-config --system-libs --cppflags --ldflags --libs core` -o main
+This interpreter which aim is to convert the language to LLVM-IR can be compilated with g++/clang++ using the following command:
+
+``` g++ -std=c++14 main.cpp parser.cpp AST.cpp lexer.cpp `llvm-config --system-libs --cppflags --ldflags --libs core` -o main ```
 
 [Kaleidoscope: Implementing a Language with LLVM](https://llvm.org/docs/tutorial/LangImpl01.html)
